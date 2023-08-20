@@ -1,0 +1,46 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gradient-custom {
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  color: #efffee;
+}
+
+.btn-info {
+  color: #000;
+  background-color: #ffffff;
+  border-color: #0000009e;
+}
+
+input:checked + h6 {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgb(233, 78, 78);
+}
+
+.card {
+  background-color: #efffee;
+}
+.tick {
+  float: right;
+  margin-top: 0.5em;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 1;
+}

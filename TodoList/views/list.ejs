@@ -1,0 +1,53 @@
+<%- include("headers") -%>
+
+    <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100 ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+            <div class="card">
+              <div class="card-body p-5">
+                <h2>Keep Your Short Notes Here<br /><b>🖊</b></h2><hr>
+            <h2 > <%= listTitle %> </h2>
+                <ul class="list-group card-body p-sm-2">
+
+                 <% newListItems.forEach(function(item){ %>
+                  <form action="/delete"
+                  method="post">
+                    <li class="list-group-item">
+                      <input class="tick" type="checkbox" name = "checkbox" value="<%=item._id%>" onChange="this.form.submit()" />
+                        <h6><b>🎯 </b>
+                        <%= item.name %>
+                      </h6>
+                      <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+                    </li>
+                    </form>
+                <%  }); %>
+                </ul>
+
+                <form
+                  action="/"
+                  method="post"
+                  class="list-group card-body p-sm-2 d-flex justify-content-center align-items-center h-100"
+                >
+                  <input
+                    type="text"
+                    name="newItem"
+                    autocomplete="off"
+                    placeholder="New Item"
+                  /><br />
+                  <button
+                    class="btn btn-info ms-2 button"
+                    type="submit"
+                    name="list"
+                    
+                    value=<%= listTitle %>
+
+                  >
+                    ➕
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include("footers") -%>
